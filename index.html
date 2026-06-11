@@ -13,22 +13,27 @@
 </head>
 <body>
 
-    <!-- GLOBAL NAVIGATION HEADER -->
+<!-- GLOBAL NAVIGATION HEADER -->
     <nav>
         <div class="nav-inner">
+            <!-- BRAND LOGO MATRIX WITH SUBTEXT -->
             <div class="logo">
                 <div class="logo-mark"></div>
-                SourzNxt
+                <div class="logo-text-stack">
+                    <span class="logo-main-title">SourzNxt</span>
+                    <span class="logo-sub-caption">by ResourceX Technologies</span>
+                </div>
             </div>
+            
+            <!-- REMAPPED NAV LINKS (PRICING REMOVED & REORDERED) -->
             <ul class="nav-links">
-                <li><a href="#" class="active">Solutions <span class="caret">▾</span></a></li>
-                <li><a href="#modules">Modules <span class="caret">▾</span></a></li>
-                <li><a href="#industries">Industries <span class="caret">▾</span></a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#industries">Industries</a></li>
                 
-                <!-- Resources Dropdown (snxt1.png) -->
+                <!-- Resources (Retained clean dropdown support structure) -->
                 <li class="has-drop">
-                    <a href="#">Resources <span class="caret">▾</span></a>
+                    <a href="#resources">Resources <span class="caret">▾</span></a>
                     <div class="drop drop-left">
                         <a href="#">Case Studies</a>
                         <a href="#">Blog</a>
@@ -37,85 +42,82 @@
                         <a href="#">Market Reports</a>
                     </div>
                 </li>
-                <li><a href="#">About</a></li>
+                
+                <!-- About configured as a direct external anchor tab -->
+                <li><a href="https://your-external-about-link-here.com" target="_blank" rel="noopener noreferrer">About</a></li>
             </ul>
+            
+            <!-- CTAS: TRUE LINK BUTTONS (LOGIN DROPDOWN REMOVED) -->
             <div class="nav-actions">
-                <!-- Login Dropdown (snxt9.png) -->
-                <div class="has-drop">
-                    <button class="btn btn-ghost">Login <span style="font-size:9px;margin-left:2px">▾</span></button>
-                    <div class="drop drop-right">
-                        <a href="#"><strong>Buyer login</strong><span>Procure &amp; bid</span></a>
-                        <a href="#"><strong>Seller login</strong><span>List &amp; auction</span></a>
-                        <a href="#"><strong>Admin login</strong><span>Manage platform</span></a>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-rust">Request demo</a>
+                <!-- Login converted to direct link opening in a new tab -->
+                <a href="https://your-external-login-link-here.com" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Login</a>
+                <!-- Request Demo targets your Google Form opening in a new tab -->
+                <a href="https://forms.gle/XiMdonP3LbUjqoqK9" target="_blank" rel="noopener noreferrer" class="btn btn-rust">Request demo</a>
             </div>
         </div>
     </nav>
 
     <!-- SECTION 1: HERO INTRO & INTERACTIVE METRICS -->
-    <section class="hero-intro-section">
-    <div class="hero-inner-split">
-        
-        <div class="hero-content-block">
-            <div class="eco-badge">Verified · Transparent · Auditable</div>
+    <section id="hero" class="hero-intro-section">
+        <div class="hero-inner-split">
             
-            <h1 class="hero-main-title">
-                India's leading <span class="highlight-glow">AI powered</span> negotiating platform.
-            </h1>
-            
-            <p class="sub-tagline">
-                One platform for AI-powered procurement, disposal, and recycling commerce for MSMEs to MNCs for buying and selling. Built for 100% transparent transactions.
-            </p>
-            
-            <div class="hero-cta-group">
-                <a href="https://forms.gle/XiMdonP3LbUjqoqK9" target="_blank" class="btn btn-rust btn-large btn-animate-shadow">Book a demo</a>
-                <a href="#" class="btn btn-ghost btn-large btn-animate-fill">Explore platform</a>
-            </div>
-            
-            <div class="hero-stats-grid">
-    
-    <div class="stat-box auto-count-box" data-target="1300" data-suffix="+">
-        <div class="stat-reveal-state">
-            <span class="pulse-dot"></span>
-            <span class="reveal-text">Loading Buyers...</span>
-        </div>
-        <div class="stat-counter-state hidden">
-            <div class="hero-stat-val">0</div>
-            <div class="hero-stat-lbl">Verified buyers</div>
-        </div>
-    </div>
-    
-    <div class="stat-box auto-count-box" data-target="500" data-suffix="+">
-        <div class="stat-reveal-state">
-            <span class="pulse-dot"></span>
-            <span class="reveal-text">Loading Vendors...</span>
-        </div>
-        <div class="stat-counter-state hidden">
-            <div class="hero-stat-val">0</div>
-            <div class="hero-stat-lbl">Active vendors</div>
-        </div>
-    </div>
-
-</div>
-        </div>
-
-        <div class="hero-reserved-space">
-            <div class="isometric-perspective-viewport">
-                <div class="iso-card-plane plane-background">
-                    <img src="v2.jpeg" alt="SourzNxt Seller Analytics Dashboard" class="iso-mockup-frame">
-                    <div class="ambient-glow-mesh"></div>
+            <div class="hero-content-block">
+                <div class="eco-badge">Verified · Transparent · Auditable</div>
+                
+                <!-- REWRITTEN GLOBAL HEADLINE -->
+                <h1 class="hero-main-title">
+                    The emerging global <span class="highlight-glow">AI powered</span> platform for intelligent buying and selling.
+                </h1>
+                
+                <p class="sub-tagline">
+                    One platform for AI-powered procurement, disposal, and recycling commerce for MSMEs to MNCs for buying and selling. Built for 100% transparent transactions.
+                </p>
+                
+                <div class="hero-cta-group">
+                    <a href="https://forms.gle/XiMdonP3LbUjqoqK9" target="_blank" rel="noopener noreferrer" class="btn btn-rust btn-large btn-animate-shadow">Book a demo</a>
+                    <a href="#modules" class="btn btn-ghost btn-large btn-animate-fill">Explore platform</a>
                 </div>
                 
-                <div class="iso-card-plane plane-foreground">
-                    <img src="v1.jpeg" alt="SourzNxt Auction Analytics Summary" class="iso-mockup-frame">
+                <div class="hero-stats-grid">
+                    <div class="stat-box auto-count-box" data-target="1300" data-suffix="+">
+                        <div class="stat-reveal-state">
+                            <span class="pulse-dot"></span>
+                            <span class="reveal-text">Loading Buyers...</span>
+                        </div>
+                        <div class="stat-counter-state hidden">
+                            <div class="hero-stat-val">0</div>
+                            <div class="hero-stat-lbl">Verified buyers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-box auto-count-box" data-target="500" data-suffix="+">
+                        <div class="stat-reveal-state">
+                            <span class="pulse-dot"></span>
+                            <span class="reveal-text">Loading Vendors...</span>
+                        </div>
+                        <div class="stat-counter-state hidden">
+                            <div class="hero-stat-val">0</div>
+                            <div class="hero-stat-lbl">Active vendors</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-</section>
+            <div class="hero-reserved-space">
+                <div class="isometric-perspective-viewport">
+                    <div class="iso-card-plane plane-background">
+                        <img src="v2.jpeg" alt="SourzNxt Seller Analytics Dashboard" class="iso-mockup-frame">
+                        <div class="ambient-glow-mesh"></div>
+                    </div>
+                    
+                    <div class="iso-card-plane plane-foreground">
+                        <img src="v1.jpeg" alt="SourzNxt Auction Analytics Summary" class="iso-mockup-frame">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- SECTION 2:  TABLES -->
  
@@ -129,7 +131,7 @@
             <div class="center-title-wrapper">
                 <h2 class="section-main-heading">Built different, by design.</h2>
                 <p class="section-sub-paragraph">
-                    SourzNxt combines auction depth, AI intelligence, and verified networks into a single transparent platform — purpose-built for India's industrial commerce.
+                    SourzNxt combines auction depth, AI intelligence, and verified networks into a single transparent platform — purpose-built for world's industrial materials' buying and selling.
                 </p>
             </div>
         </div>
@@ -315,7 +317,7 @@
 </section>
 
 <!-- SECTION 3: TWO INTEGRATED MODULES (COMMERCE ENGINE) -->
-<section class="commerce-engine-section" id="modules-engine">
+<section id="modules" class="commerce-engine-section" id="modules-engine">
     <div class="engine-container-inner">
         
         <!-- ADJUSTED TOP HEADER BLOCK -->
@@ -334,7 +336,7 @@
         <div class="modules-slider-viewport">
             <div class="modules-slider-track" id="modulesSliderTrack">
                 
-                <!-- CARD MODULE 01: AI NEGOTIATION PLATFORM (snxt4.png) -->
+                <!-- CARD MODULE 01: AI NEGOTIATION PLATFORM  -->
                 <div class="module-main-card" data-module-index="1">
                     <div class="card-glow-edge"></div>
                     <div class="module-card-split">
@@ -378,11 +380,11 @@
                                 <!-- Row 2 Split -->
                                 <div class="auction-grid-row">
                                     <div class="auction-box-card">
-                                        <h4>Closed</h4>
+                                        <h4>Closed/Tenders</h4>
                                         <p><span class="diamond-mark">◆</span> Sealed bid</p>
                                     </div>
                                     <div class="auction-box-card">
-                                        <h4>RAN</h4>
+                                        <h4>RANK</h4>
                                         <p><span class="refresh-mark">⟳</span> Random close</p>
                                     </div>
                                 </div>
@@ -397,7 +399,7 @@
                     </div>
                 </div>
 
-                <!-- CARD MODULE 02: VENDOR RFQ EXCHANGE (snxt3.png) -->
+                <!-- CARD MODULE 02: VENDOR RFQ EXCHANGE  -->
                 <div class="module-main-card" data-module-index="2">
                     <div class="card-glow-edge"></div>
                     <div class="module-card-split">
@@ -405,13 +407,14 @@
                         <!-- Left Content Area -->
                         <div class="module-left-content">
                             <div class="module-meta-line">
+                                
                                 <span class="meta-label-orange">Module 02</span>
                                 <span class="meta-dot">•</span>
                                 <span class="meta-status">Live month 3</span>
                             </div>
-                            <h3 class="module-card-title">Vendor RFQ exchange</h3>
+                            <h3 class="module-card-title">Vendor Material Exchange</h3>
                             <p class="module-card-description">
-                                A two-sided marketplace where scrap vendors and recyclers transact directly — no middlemen, no brokers. Geo-filtered RFQ matching, GST-verified counterparties, and escrow-secured payments.
+                                A two-sided marketplace where scrap vendors and recyclers transact directly — no middlemen, no brokers. Geo-filtered listings, GST-verified counterparties, and escrow-secured payments.
                             </p>
                             
                             <ul class="module-feature-list">
@@ -432,7 +435,7 @@
                                 <div class="pipeline-step-node">
                                     <div class="node-icon-avatar tint-blue-box">V</div>
                                     <div class="node-text-group">
-                                        <h5>Vendor floats RFQ</h5>
+                                        <h5>Vendor floats pass/successful delivery</h5>
                                         <p>12 MT brass scrap · Pune</p>
                                     </div>
                                     <div class="node-badge-tag verified-gst">GST ✓</div>
@@ -492,11 +495,81 @@
     </div>
 </section>
 
+<!-- ==========================================================================
+     ZIT AI HUB (REFINED BRAND ALIGNMENT & HOVER PHYSICS)
+     ========================================================================== -->
+<section class="hero-zit-integration" id="zit-ai-section">
+  <div class="zit-ambient-glow"></div>
+
+  <div class="zit-layout-container">
+    
+    <div class="zit-section-eyebrow-anchor">
+      <div class="zit-eyebrow"><span></span>Powered by ZIT AI<span></span></div>
+    </div>
+
+    <div class="zit-top-grid">
+
+      <div class="left-copy-refined">
+        <h2 class="zit-headline">Your business data.<br><em>Answered instantly.</em><br>Decided confidently.</h2>
+        
+        <div class="zit-body-text">
+          <p>ZIT can <strong>increase your operational resilience, stability, and control</strong> with an AI that truly understands your business.</p>
+          <p>ZIT learns from <strong>millions of transactions in real-time</strong> to help you forecast headwinds. See all transactions from any plant, take decisions from your corporate office — manages spends and value of <strong>multiple locations from a single place</strong>, interconnects with existing systems and pulls data effortlessly.</p>
+          <p class="zit-cta-line"><strong>Ask anything regardless of where your data lives — ZIT will find it.</strong></p>
+        </div>
+
+        <div class="zit-pills">
+          <span class="pill active">Multi-plant view</span>
+          <span class="pill active">Real-time data</span>
+          <span class="pill">ERP connected</span>
+          <span class="pill">Forecast headwinds</span>
+          <span class="pill">Scrap & RM analytics</span>
+        </div>
+      </div>
+
+      <div class="chat-shell-refined">
+        <div class="chat-top-bar">
+          <div class="chat-dots"><div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div></div>
+          <div class="chat-brand"><span>ZIT</span> AI</div>
+          <div class="chat-status"><div class="status-dot"></div>Connected · Live data</div>
+        </div>
+
+        <div class="chat-body-scrollable" id="dynamic-chat-stream">
+          </div>
+
+        <div class="chat-input-bar">
+          <input class="chat-input" id="zit-simulation-input" placeholder="Ask ZIT anything about your operations…" readonly />
+          <button class="send-btn" aria-label="Send">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-bottom-refined">
+      <div class="stat-chip" data-reveal="chip">
+        <div class="sc-icon">🏭</div>
+        <div><div class="sc-val">5 Plants</div><div class="sc-lbl">Connected live</div></div>
+      </div>
+      <div class="stat-chip" data-reveal="chip">
+        <div class="sc-icon">📊</div>
+        <div><div class="sc-val">₹87.2 Cr</div><div class="sc-lbl">Scrap value tracked</div></div>
+      </div>
+      <div class="stat-chip" data-reveal="chip">
+        <div class="sc-icon">⚡</div>
+        <div><div class="sc-val">&lt; 2 sec</div><div class="sc-lbl">Query response time</div></div>
+      </div>
+      <div class="stat-chip" data-reveal="chip">
+        <div class="sc-icon">🔗</div>
+        <div><div class="sc-val">ERP + SAP</div><div class="sc-lbl">Seamless integration</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SECTION 4: The SourzNxt Cycle -->
-
-
-
-<section class="premium-lifecycle-viewport refined-theater" id="industrial-cycle">
+<section id="solutions" class="premium-lifecycle-viewport refined-theater" id="industrial-cycle">
     <div class="lifecycle-container-inner">
         
         <div class="lifecycle-header-block">
@@ -532,7 +605,7 @@
                 </div>
                 <div class="phase-step-trigger" data-step="6">
                     <span class="phase-number">06</span>
-                    <span class="phase-label">Ledger Close</span>
+                    <span class="phase-label">Transaction Close</span>
                 </div>
             </div>
 
@@ -651,7 +724,7 @@
 
 
 <!-- SECTION 5: WHO WE SERVE (SUPPLY CHAIN NODES GRID) -->
-<section class="nodes-grid-section" id="supply-chain-nodes">
+<section id="industries" class="nodes-grid-section" id="supply-chain-nodes">
     <div class="nodes-container-inner">
         
         <!-- BALANCED HEADER LAYOUT -->
@@ -802,6 +875,7 @@
 <section class="green-ecosystem-section" id="green-multiplier-segment">
     <div class="ecosystem-container-inner">
         
+        
 
         <div class="ecosystem-block-wrapper" id="material-stream-viewport">
             
@@ -915,7 +989,7 @@
                 <div class="eco-center-title-wrapper">
                     <h2 class="eco-main-heading">Every transaction closes the loop.</h2>
                     <p class="eco-sub-paragraph">
-                        SourzNxt isn't just a commerce platform — it's a measurable ESG and carbon credit engine, aligned with UN SDG 12 & 13.
+                        SourzNxt isn't just a commerce platform — we provide EPR and data related to carbon credits transactions.
                     </p>
                 </div>
             </div>
@@ -987,17 +1061,6 @@
                     <p>Track producer responsibility metrics and auto-generate EPR reports from your transaction data.</p>
                 </div>
 
-                <div class="compliance-tab">
-                    <div class="tab-vector-line"></div>
-                    <h5>ESG reporting</h5>
-                    <p>Every transaction contributes to your ESG score with audit-ready data exports.</p>
-                </div>
-
-                <div class="compliance-tab">
-                    <div class="tab-vector-line"></div>
-                    <h5>Carbon credit engine</h5>
-                    <p>Facilitates credit generation from verified material diversion — turning waste into revenue.</p>
-                </div>
 
             </div>
 
@@ -1158,9 +1221,10 @@
                                     <div class="badge-row-item"><span class="green-indicator-dot"></span> <span>Oracle integration</span></div>
                                     <strong>NetSuite Engine Link</strong><span class="status-pill transit-tag">Live Sync</span>
                                 </div>
-                                <div class="simulated-table-row">
+                                < class="simulated-table-row">
                                     <div class="badge-row-item"><span class="green-indicator-dot"></span> <span>Tally integration</span></div>
                                     <strong>Prime Ledger Automation</strong><span class="status-pill transit-tag">Live Sync</span>
+                                    
                                 </div>
                             </div>
                             
@@ -1200,7 +1264,7 @@
                 </p>
                 <div class="cta-button-cluster">
                     <a href="https://forms.gle/XiMdonP3LbUjqoqK9" target="_blank" rel="noopener noreferrer" class="btn-primary-orange">Book a demo</a>
-                    <button class="btn-secondary-outline">Get started free</button>
+                    <a href="#hero" class="btn-secondary-outline">Get started for free</a>
                 </div>
             </div>
         </div>
@@ -1219,28 +1283,16 @@
                         The infrastructure of trust for industrial commerce. Building India's most transparent procurement, disposal and recycling commerce platform.
                     </p>
                     <div class="footer-compliance-stamps">
-                        ISO 27001 • SOC 2 Type II • GDPR ready
+                        Certified by DPIIT
                     </div>
                 </div>
 
                 <div class="footer-links-column">
                     <h4 class="footer-column-heading">Modules</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#">AI negotiation</a></li>
-                        <li><a href="#">RFQ exchange</a></li>
-                        <li><a href="#">Virtual store</a></li>
-                        <li><a href="#">ZIT AI</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links-column">
-                    <h4 class="footer-column-heading">Solutions</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="#">Steel mills</a></li>
-                        <li><a href="#">Auto OEMs</a></li>
-                        <li><a href="#">Cement plants</a></li>
-                        <li><a href="#">Foundries</a></li>
-                        <li><a href="#">MSMEs</a></li>
+                        <li><a href="#modules">AI negotiation</a></li>
+                        <li><a href="#modules">Material Resource exchange</a></li>
+                        <li><a href="#zit-ai-section">ZIT AI</a></li>
                     </ul>
                 </div>
 
@@ -1257,10 +1309,11 @@
                 <div class="footer-links-column">
                     <h4 class="footer-column-heading">Company</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Press</a></li>
+                        <li><a href="#about-tab">About</a></li>
+                        <li><a href="#careers-tab">Careers</a></li>
+                        <li><a href="#contact-tab">Contact</a></li>
+                        <li><a href="#press-tab">Press</a></li>
+                        
                     </ul>
                 </div>
 
@@ -1271,9 +1324,8 @@
                 <div class="footer-legal-links">
                     <a href="#">Privacy</a>
                     <a href="#">Terms</a>
-                    <a href="#">Compliance</a>
-                    <span class="footer-cin-data">CIN - U72900TN2025PTC000000</span>
-                </div>
+                    <a href="#">Conditions</a>
+                    </div>
             </div>
 
         </div>
@@ -1701,6 +1753,231 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.getElementById("zit-ai-section");
+    const streamContainer = document.getElementById("dynamic-chat-stream");
+    const simulationInput = document.getElementById("zit-simulation-input");
+    if (!section || !streamContainer) return;
+
+    // --- DIALOG DATA SCRIPTS STRUCTURE ---
+    const chatSequence = [
+      {
+        type: "user",
+        text: "Tell last year Bangalore plant scrap sale value",
+        inputPlaceholder: "Tell last year Bangalore plant scrap sale value..."
+      },
+      {
+        type: "ai",
+        html: `
+          <strong>Bangalore Plant — Scrap Sale FY 2024–25</strong><br>
+          Total scrap sold across 4 categories (HMS, CI borings, copper, aluminium):<br>
+          <div class="val-highlight">₹ 18.43 Cr</div><br>
+          <span class="meta-subtext">↑ 12.6% vs FY 23–24 &nbsp;|&nbsp; 6,240 MT total volume &nbsp;|&nbsp; 28 auctions conducted</span>
+        `
+      },
+      {
+        type: "user",
+        text: "Tell overall plant-wise scrap sale and raw materials procurement value",
+        inputPlaceholder: "Tell overall plant-wise scrap sale..."
+      },
+      {
+        type: "ai",
+        isGraph: true,
+        html: `
+          <strong>All Plants — FY 2024–25 Overview</strong>
+          <div class="graph-wrap">
+            <div class="graph-title">Scrap Sale vs RM Procurement (₹ Cr)</div>
+            <div class="bars">
+              <div class="bar-group">
+                <div class="bar-pair">
+                  <div class="bar scrap" data-height="54px"></div>
+                  <div class="bar raw" data-height="68px"></div>
+                </div>
+                <div class="bar-label">Bangalore</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar-pair">
+                  <div class="bar scrap" data-height="44px"></div>
+                  <div class="bar raw" data-height="60px"></div>
+                </div>
+                <div class="bar-label">Chennai</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar-pair">
+                  <div class="bar scrap" data-height="36px"></div>
+                  <div class="bar raw" data-height="50px"></div>
+                </div>
+                <div class="bar-label">Pune</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar-pair">
+                  <div class="bar scrap" data-height="28px"></div>
+                  <div class="bar raw" data-height="42px"></div>
+                </div>
+                <div class="bar-label">Hyderabad</div>
+              </div>
+              <div class="bar-group">
+                <div class="bar-pair">
+                  <div class="bar scrap" data-height="22px"></div>
+                  <div class="bar raw" data-height="34px"></div>
+                </div>
+                <div class="bar-label">Ahmedabad</div>
+              </div>
+            </div>
+            <div class="legend">
+              <div class="leg-item"><div class="leg-dot ld-scrap"></div>Scrap Sale</div>
+              <div class="leg-item"><div class="leg-dot ld-raw"></div>RM Procurement</div>
+            </div>
+            <div class="total-row">
+              <div class="total-chip"><div class="tc-label">TOTAL SCRAP SALE</div><div class="tc-val tc-s">₹ 87.2 Cr</div></div>
+              <div class="total-chip"><div class="tc-label">TOTAL RM PROCUREMENT</div><div class="tc-val tc-r">₹ 2.14 Cr</div></div>
+            </div>
+          </div>
+          <span class="meta-subtext-bottom">Data pulled from 5 plants · ERP sync 2h ago · Drill down by plant? Just ask.</span>
+        `
+      }
+    ];
+
+    // --- HELPER METRIC SCROLL ENGINE ---
+    const smoothScrollToBottom = () => {
+      streamContainer.scrollTo({
+        top: streamContainer.scrollHeight,
+        behavior: "smooth"
+      });
+    };
+
+    // --- PROCEDURAL TYPING AND DOT GENERATOR CONTROLLER ---
+    const typeUserMessage = (msgData, completionCallback) => {
+      // Clear input and display typing goal path
+      if (simulationInput) simulationInput.value = "";
+      
+      const row = document.createElement("div");
+      row.className = "msg-row user animated-fade-in";
+      row.innerHTML = `
+        <div class="avatar av-user">OP</div>
+        <div class="bubble user"><span class="text-content"></span><span class="typing-cursor"></span></div>
+      `;
+      streamContainer.appendChild(row);
+      smoothScrollToBottom();
+
+      const textContainer = row.querySelector(".text-content");
+      let charIndex = 0;
+      
+      const typeInterval = setInterval(() => {
+        if (charIndex < msgData.text.length) {
+          const char = msgData.text.charAt(charIndex);
+          textContainer.textContent += char;
+          if (simulationInput) simulationInput.value += char;
+          charIndex++;
+          // Variable typing pace creates a realistic user simulation feel
+          if (charIndex % 3 === 0) smoothScrollToBottom();
+        } else {
+          clearInterval(typeInterval);
+          // Strip cursor off completed message context
+          const cursor = row.querySelector(".typing-cursor");
+          if (cursor) cursor.remove();
+          setTimeout(completionCallback, 600);
+        }
+      }, 35); // Fast, realistic keystroke speed simulation
+    };
+
+    const renderThinkingIndicator = () => {
+      const row = document.createElement("div");
+      row.className = "msg-row animated-fade-in zit-thinking-row";
+      row.innerHTML = `
+        <div class="avatar av-ai">Z</div>
+        <div class="zit-thinking-wrapper">
+          <div class="think-dot"></div>
+          <div class="think-dot"></div>
+          <div class="think-dot"></div>
+        </div>
+      `;
+      streamContainer.appendChild(row);
+      smoothScrollToBottom();
+      return row;
+    };
+
+    const renderAIMessage = (msgData, completionCallback) => {
+      const thinkingRow = renderThinkingIndicator();
+
+      // ZIT "thinks" for 1.8 seconds before returning data metrics
+      setTimeout(() => {
+        thinkingRow.remove();
+
+        if (simulationInput) simulationInput.value = ""; // Ready for the next loop
+
+        const row = document.createElement("div");
+        row.className = "msg-row animated-fade-in";
+        row.innerHTML = `
+          <div class="avatar av-ai">Z</div>
+          <div class="bubble ai ${msgData.isGraph ? 'content-infographics' : ''}">
+            ${msgData.html}
+          </div>
+        `;
+        streamContainer.appendChild(row);
+        smoothScrollToBottom();
+
+        // If the block contains analytical charts, scale up their vertical height lines
+        if (msgData.isGraph) {
+          setTimeout(() => {
+            const bars = row.querySelectorAll(".bar");
+            bars.forEach(bar => {
+              const targetH = bar.getAttribute("data-height");
+              bar.style.height = targetH;
+            });
+            setTimeout(smoothScrollToBottom, 300); // Re-align scroll track after bars finish growing
+          }, 150);
+        }
+
+        setTimeout(completionCallback, 1200);
+      }, 1800);
+    };
+
+    // --- PIPELINE LOOP COMMAND EXECUTION ---
+    const runChatScriptLoop = (index) => {
+      if (index >= chatSequence.length) return;
+
+      const currentStep = chatSequence[index];
+      if (currentStep.type === "user") {
+        typeUserMessage(currentStep, () => {
+          runChatScriptLoop(index + 1);
+        });
+      } else {
+        renderAIMessage(currentStep, () => {
+          runChatScriptLoop(index + 1);
+        });
+      }
+    };
+
+    // --- VIEWPORT SCROLL DETECTOR INTERCEPTOR ---
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // 1. Kick off the teletype chat execution thread
+          runChatScriptLoop(0);
+
+          // 2. Animate the static bottom horizontal grid elements
+          const horizontalChips = section.querySelectorAll('[data-reveal="chip"]');
+          horizontalChips.forEach((chip, idx) => {
+            setTimeout(() => {
+              chip.classList.add("active-reveal");
+            }, 500 + (idx * 120));
+          });
+
+          // Unobserve to run the animation sequence just once per session
+          scrollObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.25, // Triggers when 25% of the console layout card enters the screen
+      rootMargin: "0px"
+    });
+
+    scrollObserver.observe(section);
+  });
 </script>
 
 </body>

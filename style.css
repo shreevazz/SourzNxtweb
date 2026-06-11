@@ -88,15 +88,12 @@ nav {
   justify-content: space-between; 
 }
 
-/* --- LOGO ENGINE --- */
+/* --- LOGO TEXT STACK ENGINE --- */
 .logo {
   color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   user-select: none;
 }
 
@@ -121,12 +118,35 @@ nav {
   border-radius: 1px;
 }
 
-/* --- LINK STRUCTURAL ROW --- */
+.logo-text-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.logo-main-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.logo-sub-caption {
+  font-size: 9px;
+  font-weight: 500;
+  color: #A8A49D; /* Balanced contrast Slate-Grey */
+  letter-spacing: 0.01em;
+  margin-top: 1px;
+  line-height: 1;
+}
+
+/* --- LINK STRUCTURAL ROW (REORDERED & ADJUSTED) --- */
 .nav-links {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 28px;
+  gap: 32px; /* Margins widened subtly to gracefully distribute across workspace canvas */
   margin: 0;
   padding: 0;
 }
@@ -420,7 +440,6 @@ nav {
 }
 
 /* --- COUNTER ELEMENTS --- */
-
 .stat-box.auto-count-box {
   cursor: default;
   outline: none;
@@ -1457,6 +1476,305 @@ nav {
 }
 
 /* ==========================================================================
+   ZIT AI SECTION: FULL DEFINITIVE STYLESHEET
+   ========================================================================== */
+
+/* --- SECTION BASE CANVAS --- */
+.hero-zit-integration {
+  background: #0A1628; /* Matches your exact dark navy backdrop */
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Subtle ambient background illumination spot */
+.zit-ambient-glow {
+  position: absolute;
+  top: 30%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(196, 98, 45, 0.08) 0%, rgba(0,0,0,0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.zit-layout-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- TOP LEFT CORNER BADGE WRAPPER --- */
+.zit-section-eyebrow-anchor {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 28px;
+}
+
+.zit-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: #C4622D;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.zit-eyebrow span { width: 20px; height: 1.5px; background: #C4622D; display: inline-block; }
+
+/* --- TWO-COLUMN GRID --- */
+.zit-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* --- LEFT COLUMN TEXT SPACING --- */
+.left-copy-refined {
+  padding-right: 16px;
+}
+
+.zit-headline {
+  font-family: 'Syne', sans-serif;
+  font-size: 38px; /* Balanced desktop header profile */
+  font-weight: 800;
+  color: #F5EDD8;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+.zit-headline em { color: #C4622D; font-style: normal; }
+
+.zit-body-text p {
+  font-size: 14px;
+  color: #7E9AB5;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.zit-body-text strong { color: #A8C4DC; font-weight: 500; }
+.zit-cta-line { margin-top: 24px; }
+
+.zit-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.pill {
+  background: #112240;
+  border: 1px solid #1E3A5A;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 11px;
+  color: #7E9AB5;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pill.active { border-color: #C4622D; color: #C4622D; background: #1A0F07; }
+.pill:hover { border-color: rgba(196, 98, 45, 0.5); color: #FFF; cursor: default; }
+
+/* --- RIGHT COLUMN CHAT WINDOW (FLY-UP HOVER PHYSICS) --- */
+.chat-shell-refined {
+  background: #0F1E32;
+  border-radius: 14px;
+  border: 1px solid #1A3050;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  
+  /* Volumetric ease-out-expo curve for premium transition fluid speed */
+  transform: translateY(0) scale(1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Flying active interaction hook when cursor is placed over card */
+.chat-shell-refined:hover {
+  transform: translateY(-16px) scale(1.015); /* Elegantly flies upward while softly inflating bounds */
+  border-color: rgba(196, 98, 45, 0.35);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 
+              0 0 50px rgba(196, 98, 45, 0.08); /* Combines dark void weight with orange illumination bloom */
+}
+
+.chat-top-bar {
+  background: #0A1628;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #1A3050;
+}
+.chat-dots { display: flex; gap: 6px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; }
+.d1 { background: #C4622D; } .d2 { background: #E8A23A; } .d3 { background: #2D7A4F; }
+.chat-brand { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: #F5EDD8; letter-spacing: .03em; }
+.chat-brand span { color: #C4622D; }
+.chat-status { margin-left: auto; font-size: 11px; color: #2D7A4F; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #2D7A4F; box-shadow: 0 0 8px #2D7A4F; }
+
+/* Fixed layout clipping space container */
+.chat-body-scrollable {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.msg-row { display: flex; align-items: flex-start; gap: 10px; }
+.msg-row.user { flex-direction: row-reverse; }
+.avatar { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+.av-ai { background: #C4622D; color: #fff; }
+.av-user { background: #1E4D38; color: #A8D5BB; }
+
+.bubble { border-radius: 12px; padding: 12px 16px; font-size: 12px; line-height: 1.6; max-width: 85%; }
+.bubble.user { background: #1A2D42; color: #C4D8E8; border-bottom-right-radius: 2px; }
+.bubble.ai { background: #162033; color: #D8E8F0; border-bottom-left-radius: 2px; border: 1px solid #1E3050; }
+.bubble strong { color: #F5EDD8; font-weight: 600; }
+
+.val-highlight {
+  display: inline-block;
+  background: #1A0F07;
+  border: 1px solid #C4622D;
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: #F0A070;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 6px 0;
+}
+.meta-subtext { color: #7E9AB5; font-size: 11px; display: block; margin-top: 4px; }
+
+/* --- INFOGRAPHIC CHIP AND BARS OVERRIDES --- */
+.bubble.ai.content-infographics {
+  max-width: 90%; /* Widened out to avoid breaking margins */
+}
+.graph-wrap { background: #0D1929; border-radius: 8px; padding: 14px; margin-top: 10px; border: 1px solid #1A3050; }
+.graph-title { font-size: 9px; color: #7E9AB5; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 14px; }
+
+.bars { display: flex; align-items: flex-end; gap: 8px; height: 80px; }
+.bar-group { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+.bar-pair { display: flex; gap: 3px; align-items: flex-end; }
+
+/* The bars start at 0px and scale upward via our entry observer script */
+.bar { width: 12px; border-radius: 3px 3px 0 0; height: 0px; transition: height 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+.bar.scrap { background: #C4622D; }
+.bar.raw { background: #1E4D38; }
+.bar-label { font-size: 9px; color: #4A6880; text-align: center; margin-top: 4px; }
+
+.legend { display: flex; gap: 14px; margin-top: 12px; }
+.leg-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #7E9AB5; }
+.leg-dot { width: 8px; height: 8px; border-radius: 2px; }
+.ld-scrap { background: #C4622D; } .ld-raw { background: #1E4D38; }
+
+.total-row { display: flex; gap: 10px; margin-top: 14px; }
+.total-chip { flex: 1; background: #111F33; border-radius: 6px; padding: 8px 10px; border: 1px solid #1A3050; }
+.tc-label { font-size: 8px; color: #7E9AB5; font-weight: 600; letter-spacing: .05em; }
+.tc-val { font-size: 13px; font-weight: 700; margin-top: 2px; }
+.tc-s { color: #C4622D; } .tc-r { color: #2D7A4F; }
+.meta-subtext-bottom { color: #7E9AB5; font-size: 11px; display: block; margin-top: 10px; }
+
+/* --- INPUT FOOTER TRACK --- */
+.chat-input-bar { display: flex; align-items: center; gap: 8px; padding: 14px 20px; border-top: 1px solid #1A3050; background: #0A1628; }
+.chat-input { flex: 1; background: #112240; border: 1px solid #1E3A5A; border-radius: 20px; padding: 8px 16px; font-size: 11px; color: #C4D8E8; outline: none; }
+.send-btn { width: 32px; height: 32px; border-radius: 50%; background: #C4622D; border: none; display: flex; align-items: center; justify-content: center; }
+
+/* --- LOWER REFINED SUMMARY GRID --- */
+.hero-bottom-refined { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; width: 100%; }
+.hero-bottom-refined .stat-chip { background: #112240; border: 1px solid #1A3050; border-radius: 12px; padding: 16px; display: flex; align-items: center; gap: 12px; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease; }
+.hero-bottom-refined .stat-chip:hover { transform: translateY(-4px); border-color: rgba(196, 98, 45, 0.4); }
+.sc-icon { width: 32px; height: 32px; border-radius: 8px; background: #1A0F07; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.sc-val { font-size: 15px; font-weight: 700; color: #F5EDD8; }
+.sc-lbl { font-size: 10px; color: #4A6880; margin-top: 2px; font-weight: 500; }
+
+/* --- SCROLL REVEAL SCENARIO CONTROLS (ENTRY/EXIT) --- */
+[data-reveal="bubble"] {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal="bubble"].active-reveal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+[data-reveal="chip"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal="chip"].active-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive breakpoint fallback */
+@media (max-width: 991px) {
+  .zit-top-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-bottom-refined { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 568px) {
+  .hero-bottom-refined { grid-template-columns: 1fr; }
+}
+
+/* --- SIMULATED THINKING INDICATOR DOTS --- */
+.zit-thinking-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 18px;
+  background: #162033;
+  border: 1px solid #1E3050;
+  border-radius: 12px;
+  border-bottom-left-radius: 2px;
+  width: fit-content;
+}
+.think-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #7E9AB5;
+  border-radius: 50%;
+  animation: bounceThinking 1.4s infinite ease-in-out both;
+}
+.think-dot:nth-child(1) { animation-delay: -0.32s; }
+.think-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounceThinking {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* --- TELETYPE INTERACTIVE CURSOR EFFECT --- */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 13px;
+  background-color: #C4622D;
+  margin-left: 2px;
+  animation: blinkCursor 0.8s infinite steps(2, start);
+  vertical-align: middle;
+}
+.bubble.user .typing-cursor {
+  background-color: #C4D8E8;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Base bubble fade-in entry animation style override */
+.msg-row.animated-fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: bubbleSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes bubbleSlideIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================================
    REFINED LIFECYCLE GRID (POST-DIAGNOSTIC ARCHITECTURE)
    ========================================================================== */
 
@@ -1860,6 +2178,9 @@ nav {
   padding: 100px 32px;
   width: 100%;
   overflow: hidden;
+  
+  /* FIXED: Ensures navbar alignment protection when clicking the navigation links */
+  scroll-margin-top: 64px; 
 }
 
 .nodes-container-inner {
@@ -1911,7 +2232,7 @@ nav {
   color: #4A4742;
   font-size: 15px;
   line-height: 1.6;
-  max-width: 680px; /* Perfectly structured paragraph flow tracking snxt6 */
+  max-width: 680px; 
   margin: 0 auto;
 }
 
@@ -1934,21 +2255,24 @@ nav {
   background-clip: padding-box;
   border: 1px solid transparent;
   
-  /* Initial hidden timeline tracking configurations */
-  opacity: 0;
-  transform: translateY(24px); 
+  /* SAFE ANIMATION FALLBACK MECHANISM:
+     By changing these initial values, your cards will instantly show up 
+     and float nicely on hover, even if your JavaScript doesn't trigger.
+  */
+  opacity: 1; 
+  transform: translateY(0); 
   
-  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), 
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), 
               box-shadow 0.45s ease, 
               border-color 0.45s ease,
-              opacity 1.2s ease;
+              opacity 0.45s ease;
   will-change: transform, opacity;
 }
 
-/* This class gets applied by the JavaScript sequencer scroll observer script dynamically */
+/* Retained wrapper hook so your javascript engine can still inject cleanly */
 .node-showcase-card.entrance-reveal {
-  opacity: 1;
-  transform: translateY(0); 
+  opacity: 1 !important;
+  transform: translateY(0) !important; 
 }
 
 /* --- UNIQUE ALL-EDGES ORANGE SHADED ILLUMINATION GLOW LAYER --- */
@@ -1972,7 +2296,7 @@ nav {
 }
 
 /* --- MOUSE HOVER REACTION ENGINE --- */
-.node-showcase-card.entrance-reveal:hover {
+.node-showcase-card:hover {
   transform: translateY(-6px); /* Premium 6px floating lift on cursor hover */
 }
 
@@ -1990,13 +2314,23 @@ nav {
   padding-bottom: 16px;
 }
 
+/* Flex layout utility for the dynamic background icon badges */
+.node-icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .node-svg-icon {
   width: 16px;
   height: 16px;
   stroke-width: 2.2px; /* Gives the vector lines a high-end, premium stroke weight */
   display: block;
 }
-
 
 /* Brand Palette Custom Tint Grouping Icons */
 .tint-blue { background: #E8EFF5; color: #1A3348; }
@@ -2051,7 +2385,6 @@ nav {
     font-size: 32px;
   }
 }
-
 /* ==========================================================================
    SECTION 6: PREMIUM INTEGRATED GREEN ENVIRONMENT (CONCEPTS 1 & 2)
    ========================================================================== */
@@ -2296,8 +2629,12 @@ nav {
 .esg-card-content {
   position: relative;
   z-index: 2;
-  display: flex;
+
+
+
+    display: flex;
   flex-direction: column;
+  
 }
 
 /* Card Mouseover Reactions */
@@ -2368,26 +2705,30 @@ nav {
 
 /* --- BOTTOM COMPLIANCE FOOTER METRICS --- */
 .compliance-tabs-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  display: flex;             /* FIXED: Changed from grid to flex layout */
+  justify-content: center;   /* FIXED: Centers the card container horizontally */
+  align-items: center;
   width: 100%;
 }
 
 .compliance-tab {
   display: flex;
   flex-direction: column;
+  align-items: center;       /* FIXED: Centers text, heading, and line inside the card */
+  text-align: center;        /* FIXED: Balances multi-line text blocks alignment */
+  max-width: 500px;          /* Prevents text from stretching out too wide */
+  width: 100%;
 }
 
 /* Smooth fading olive separator lines replacing static dividers */
 .tab-vector-line {
   height: 1px;
   background: #C4D1C7;
-  width: 100%;
+  width: 140px;              /* FIXED: Changed from 100% to a balanced design width */
   margin-bottom: 20px;
   opacity: 0;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;  /* FIXED: Line now blooms outwards beautifully from the middle */
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.3s, opacity 0.8s ease 0.3s;
 }
 
@@ -2413,13 +2754,13 @@ nav {
 /* --- RESPONSIVE FALLBACK TRACKS --- */
 @media (max-width: 1100px) {
   .esg-dashboard-grid { grid-template-columns: repeat(2, 1fr); }
-  .compliance-tabs-row { grid-template-columns: 1fr; gap: 24px; }
+  .compliance-tabs-row { gap: 24px; }
   .material-showcase-matrix { flex-direction: column; align-items: flex-start; }
   .counter-metric-card { text-align: center; align-items: center; width: 100%; margin-bottom: 10px; }
 }
 @media (max-width: 600px) {
   .esg-dashboard-grid { grid-template-columns: 1fr; }
-}
+} 
 
 /* ==========================================================================
    SECTION 7 CSS: FOUNDATIONAL PILLARS SYSTEM STYLING
@@ -2430,6 +2771,7 @@ nav {
   padding: 110px 32px;
   width: 100%;
   overflow: hidden;
+  
 }
 
 .infra-container-inner {
@@ -3063,6 +3405,7 @@ nav {
   font-size: 11px;
   color: #403C37;
   letter-spacing: 0.02em;
+  
 }
 
 /* RESPONSIVE LAYOUT ENGINE CODES */
@@ -3085,3 +3428,4 @@ nav {
   .footer-brand-column { grid-column: span 1; }
   .footer-base-horizon { flex-direction: column; align-items: flex-start; }
 }
+
